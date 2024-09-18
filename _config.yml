@@ -4,3 +4,5 @@ plugins:
 title: OpenGRC Documentation
 description: OpenGRC is a free and open-source Governance Risk and Compliance tool
 show_downloads: true
+github:
+  zip_url: https://github.com/LeeMangold/OpenGRC/download.zip

@@ -1,3 +1,6 @@
+<p style="text-align: center;">
+  <img src="img/logo-256.png" alt="OpenGRC Logo" />
+</p>
 
 ![OpenGRC Logo](img/logo-256.png)
 

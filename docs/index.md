@@ -2,8 +2,6 @@
   <img src="img/logo-256.png" alt="OpenGRC Logo" />
 </p>
 
-![OpenGRC Logo](img/logo-256.png)
-
 # Welcome to OpenGRC
 
 OpenGRC is a cyber Governance, Risk, and Compliance web application intended for use by small businesses and teams. This is not intended to replace large-scale GRC Platforms, but it just might for your usecase. OpenGRC provides a resource for those who need to manage a security program but can't manage the price tag and complexity of alternatives.

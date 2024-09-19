@@ -1,8 +1,5 @@
-remote_theme: pages-themes/cayman@v0.2.0
-plugins:
-- jekyll-remote-theme
-title: OpenGRC Documentation
-description: OpenGRC is a free and open-source Governance Risk and Compliance tool
-show_downloads: true
-github:
-  zip_url: https://github.com/LeeMangold/OpenGRC/download.zip
+site_name: OpenGRC Documentation
+theme: readthedocs
+nav:
+  - Home: index.md
+  - Getting Started: getstarted.md

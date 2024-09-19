@@ -2,4 +2,3 @@ site_name: OpenGRC Documentation
 theme: readthedocs
 nav:
   - Home: index.md
-  - Getting Started: getstarted.md

@@ -2,3 +2,4 @@ site_name: OpenGRC Documentation
 theme: readthedocs
 nav:
   - Home: index.md
+  - Foundations: foundations.md

@@ -1,6 +1,17 @@
 # GRC Foundations
 
-## Workflow
+## Typical Workflows
+There are a lot of ways and means to implement a Governance, Risk, and Compliance program. The following workflows form the basis of most SMB GRC programs and is how OpenGRC is designed to work:
+
+### Compliance Workflow
+1. Create a new Standard that you want to adhere to.
+2. Add Controls (requirements) that, when followed, meet the requirements of the Standard.
+3. Create Implementations that satisfy the requirements of the Controls.
+4. Perform Audits to ensure that the Implementations put in place to meet the control requirements are being followed and are effective.
+
+### Risk Workflow
+[Coming Soon]
+
 
 ## Standards
 Security standards are a set of guidelines and best practices designed to safeguard systems, networks, and data from various cyber threats. They establish a baseline for implementing and measuring effective security controls within organizations. These standards cover a broad range of areas including network security, data encryption, access control, and vulnerability management. By adhering to these standards, organizations can protect themselves against unauthorized access, data breaches, and other cyber threats, thereby ensuring the confidentiality, integrity, and availability of their information assets. Common examples of security standards include ISO/IEC 27001, which provides a framework for information security management systems, and the Payment Card Industry Data Security Standard (PCI DSS), which outlines security measures for organizations handling credit card transactions.

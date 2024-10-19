@@ -1,5 +1,5 @@
 <p style="text-align: center;">
-  <img src="img/logo-256.png" alt="OpenGRC Logo" />
+  <img src="https://github.com/LeeMangold/opengrc-docs/blob/main/docs/img/logo-256.png?raw=true" alt="OpenGRC Logo" />
 </p>
 
 # Welcome to OpenGRC
@@ -15,9 +15,12 @@ OpenGRC is a cyber Governance, Risk, and Compliance web application intended for
 
 Above all, OpenGRC is written to solve cyber compliance headaches that tend to be caused by complex enterprise solutions. It doesn't have to be that hard!
 
+## Documentation
+All OpenGRC Documentation is maintained at [https://docs.opengrc.com](https://docs.opengrc.com).
+
 ## Contributing to OpenGRC
 
-OpenGRC is an open-source project and we welcome contributions. If you would like to contribute, please see our [Contributing Guide](/contributing/).
+OpenGRC is an open-source project and we welcome contributions. Contribution guidelines will be published soon!
 
 ## License
 
@@ -25,7 +28,7 @@ OpenGRC is licensed under the [MIT License](https://opensource.org/licenses/MIT)
 
 ## Security
 
-If you believe you have found a security vulnerability in OpenGRC, please report it to us as described in our [Security Policy](/security/).
+If you believe you have found a security vulnerability in OpenGRC, please report it to lee@opengrc.com.
 
 ## Acknowledgements
 
@@ -35,7 +38,7 @@ OpenGRC is built on the shoulders of giants. We would like to thank the followin
 * [Filament](https://filamentphp.com)
 
 ## Code of Conduct
-The OpenGRC code of conduct is derived from the Laravel and Ruby codes of conduct. Any violations of the code of conduct may be reported to Lee Mangold (lee@mangoldsecurity.com):
+The OpenGRC code of conduct is derived from the Laravel and Ruby codes of conduct. Any violations of the code of conduct may be reported to Lee Mangold (lee@opengrc.com):
 
 - Participants will be tolerant of opposing views.
 - Participants must ensure that their language and actions are free of personal attacks and disparaging personal remarks.

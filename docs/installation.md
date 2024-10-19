@@ -16,7 +16,7 @@ Before you begin, make sure your system meets the following minimum requirements
 
 You can verify your current versions by running the following commands:
 
-```bash
+```
 php -v
 composer --version
 node -v
@@ -32,13 +32,13 @@ If any of the requirements are not met, install or update the software according
 
 To get started, clone the **OpenGRC** repository from GitHub to your local environment.
 
-```bash
+```
 git clone https://github.com/LeeMangold/OpenGRC.git
 ```
 
 Navigate into the project directory:
 
-```bash
+```
 cd OpenGRC
 ```
 
@@ -48,7 +48,7 @@ cd OpenGRC
 
 Laravel uses Composer for dependency management. Run the following command to install the required PHP packages:
 
-```bash
+```
 composer install
 ```
 
@@ -66,7 +66,7 @@ memory_limit = 512M
 
 Next, install the JavaScript dependencies required by the project using npm. These include Laravel Mix and any front-end libraries.
 
-```bash
+```
 npm install
 ```
 
@@ -80,13 +80,13 @@ Laravel uses an `.env` file to manage environment-specific settings such as data
 
 1. Copy the example `.env` file to create your own environment configuration:
 
-   ```bash
+   ```
    cp .env.example .env
    ```
 
 2. Open the `.env` file in your preferred editor and update the database connection details. For example:
 
-   ```dotenv
+   ```
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
    DB_PORT=3306
@@ -103,7 +103,7 @@ Laravel uses an `.env` file to manage environment-specific settings such as data
 
 Laravel requires an application key for encryption purposes. Run the following command to generate this key:
 
-```bash
+```
 php artisan key:generate
 ```
 
@@ -123,7 +123,7 @@ Now you need to set up the MySQL database that Laravel will use. If you haven’
 
 1. Log in to your MySQL server:
 
-   ```bash
+   ```
    mysql -u root -p
    ```
 
@@ -131,13 +131,13 @@ Now you need to set up the MySQL database that Laravel will use. If you haven’
 
 2. Create a new database for OpenGRC:
 
-   ```sql
+   ```
    CREATE DATABASE opengrc;
    ```
 
 3. Exit the MySQL shell:
 
-   ```sql
+   ```
    exit;
    ```
 
@@ -151,13 +151,13 @@ With the database set up, you can now create the necessary tables and seed them 
 
 1. Run the database migrations to create tables:
 
-   ```bash
+   ```
    php artisan migrate
    ```
 
 2. After the migrations are complete, run the seeder to populate the database with initial data:
 
-   ```bash
+   ```
    php artisan db:seed
    ```
 
@@ -171,13 +171,13 @@ Next, compile the front-end assets using Laravel Mix. This step will bundle Java
 
 1. Compile for development:
 
-   ```bash
+   ```
    npm run dev
    ```
 
 2. Alternatively, for production builds, you can run:
 
-   ```bash
+   ```
    npm run build
    ```
 
@@ -189,7 +189,7 @@ This will minify your assets and optimize them for production environments.
 
 To start the application locally, you can use Laravel’s built-in development server:
 
-```bash
+```
 php artisan serve
 ```
 
@@ -212,7 +212,7 @@ If you are deploying OpenGRC in a production environment, ensure you:
 
 Ensure the necessary directories are writable by the web server:
 
-```bash
+```
 chmod -R 775 storage
 chmod -R 775 bootstrap/cache
 ```

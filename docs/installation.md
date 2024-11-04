@@ -230,7 +230,7 @@ Pass: password
 
 ---
 
-# Docker Instructions
+## Docker Instructions
 
 A Dockerfile is included with OpenGRC that uses SQLite persistence and HTTP on port 80 running on Apache. You can set the following environment variables using the -e <name>=<value> flag in docker run:
 

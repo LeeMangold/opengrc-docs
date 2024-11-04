@@ -228,6 +228,21 @@ User: admin@example.com
 Pass: password
 ```
 
-## Conclusion
+---
 
-You have successfully installed **OpenGRC** on your local machine. You can now start developing or customizing the application as needed. For further configuration or customizations, refer to the official [Laravel](https://laravel.com/docs) documentation.
+# Docker Instructions
+
+A Dockerfile is included with OpenGRC that uses SQLite persistence and HTTP on port 80 running on Apache. You can set the following environment variables using the -e <name>=<value> flag in docker run:
+
+```yml
+APP_ENV - default: local
+APP_DEBUG - default: false, set to true to see detailed error screens.
+DB_CONNECTION - default: "sqlite", can be set to "mysql" for a MySQL database.
+DB_HOST - default: "localhost"
+DB_PORT - default: "", can be set to "3306" for a MySQL database.
+DB_DATABASE - default: "/var/www/html/storage/opengrc.sqlite", the database name ("opengrc" for MySQL)
+DB_USERNAME - default: "", the database user name.
+DB_PASSWORD - default: "", the database password.
+```
+
+To run the build, use composer run-script docker-build.

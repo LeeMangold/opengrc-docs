@@ -97,6 +97,8 @@ Laravel uses an `.env` file to manage environment-specific settings such as data
 
    Replace `your_password` with the actual password for your MySQL user. You may also need to adjust the `DB_HOST` and `DB_PORT` if you are using a remote or non-default setup.
 
+Important: Be sure to properly configure `APP_URL` to avoid any CORS errors.
+
 ---
 
 ## Step 5: Generate Application Key

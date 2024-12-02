@@ -15,6 +15,13 @@ OpenGRC is a cyber Governance, Risk, and Compliance web application intended for
 
 Above all, OpenGRC is written to solve cyber compliance headaches that tend to be caused by complex enterprise solutions. It doesn't have to be that hard!
 
+## How to get OpenGRC
+OpenGRC is a web-based tool that requires the user to run a webserver and a database server. There are two ways to deploy OpenGRC: Install the software like a standard web application on your web server or install it in a containerized environment like Docker or Podman. 
+
+While OpenGRC is intended to be an easy-to-use tool, it does require some technical knowledge to install and maintain. If you are not comfortable with the installation process, you may want to consider hiring a professional to help you get started.
+
+See the [Installation Guide](/installation) to get started hosting your own OpenGRC instance. 
+
 ## Documentation
 All OpenGRC Documentation is maintained at [https://docs.opengrc.com](https://docs.opengrc.com).
 

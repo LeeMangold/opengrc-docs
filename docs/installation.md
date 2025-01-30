@@ -12,7 +12,7 @@ Before you begin, make sure your system meets the following minimum requirements
 - **Composer**: 2.5 or higher
 - **Node.js**: 18.0 or higher
 - **npm**: 8.0 or higher
-- **MySQL**: 5.7 or higher (or MariaDB 10.3 or higher) or SQLite 3
+- **MySQL or SQLite3**: 5.7 or higher (or MariaDB 10.3 or higher) or SQLite 3
   - **Note**: If you are using MySQL, you will need to create the database FIRST before running the installer. SQLite is perfectly fine for small installations and test environments and requires no additional setup.
 
 You can verify your current versions by running the following commands:
@@ -55,6 +55,9 @@ bash install.sh
 This will run a number of commands, download the necessary dependencies, and set up the application for you. 
 
 Note: If you need to run this command again, you must delete the database information first by either deleting the databases/opengrc.sqlite file or dropping/recreating your database. If you don't you will encounter errors.
+
+**Alternative** 
+If you choose to install like like a traditional Laravel Application, you may do so, but be sure to run "php artisan db:seed" to load default permissions and get important setup steps taken care of.
 
 ---
 

@@ -56,8 +56,12 @@ This will run a number of commands, download the necessary dependencies, and set
 
 Note: If you need to run this command again, you must delete the database information first by either deleting the databases/opengrc.sqlite file or dropping/recreating your database. If you don't you will encounter errors.
 
-**Alternative** 
-If you choose to install like like a traditional Laravel Application, you may do so, but be sure to run "php artisan db:seed" to load default permissions and get important setup steps taken care of.
+### (Alternative) Unattended Installation ###
+If you would like to install with all defaults, using sqlite, admin@example.com/password, you may do the following:
+```
+composer update
+php artisan opengrc:install --unattended
+```
 
 ---
 

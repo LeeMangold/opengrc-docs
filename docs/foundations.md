@@ -10,14 +10,24 @@ There are a lot of ways and means to implement a Governance, Risk, and Complianc
 4. Perform Audits to ensure that the Implementations put in place to meet the control requirements are being followed and are effective.
 
 ### Risk Workflow
-[Coming Soon]
+OpenGRC allows you to manage, rank, and track cybersecurity risks in your environment. This is a very simple Risk Management implementation and is likely sufficient for most small organizations. The following is a typical Risk Management workflow in OpenGRC:
+1. Create a new Risk.
+2. Rate the Risk based on its likelihood and impact, assuming you do NOTHING. This is your Inherent Risk.
+3. Create and relate Implementations to the Risk item that reduce the likelihood or impact of the Risk.
+4. Rate the Risk again, assuming you implement the Mitigations. This is your Residual Risk.
+
+The heatmaps will show you how successful you are at managing your risks. The goal is to reduce the Residual Risk to an acceptable level (determined by you and your organizations risk appetite). This can get you started with a basic risk management program, but please note that this description is not a full tutorial on Risk Management.
 
 
 ## Foundational Data Objects
 
+## Programs
+Programs are the highest level of organization in OpenGRC. Programs are used to group together related Standards, Controls, Implementations, and Audits. In OpenGRC, a program is **optional** and simply a container for multiple standards. A good example for a usecase is, for example, CMMC. CMMC is a combination of the 800-171, 800-172, as well as various laws from the FAR and DFARS. Grouping them all together under one Program allows you to easily manage, audit, and report them all together.
+
+As a reminder, using the program feature is optional. You can still create and manage Standards, Controls, Implementations, and Audits without using a Program.
+
 ## Standards
 Security standards are a set of guidelines and best practices designed to safeguard systems, networks, and data from various cyber threats. They establish a baseline for implementing and measuring effective security controls within organizations. These standards cover a broad range of areas including network security, data encryption, access control, and vulnerability management. By adhering to these standards, organizations can protect themselves against unauthorized access, data breaches, and other cyber threats, thereby ensuring the confidentiality, integrity, and availability of their information assets. Common examples of security standards include ISO/IEC 27001, which provides a framework for information security management systems, and the Payment Card Industry Data Security Standard (PCI DSS), which outlines security measures for organizations handling credit card transactions.
-
 
 ## Controls
 A security control is a safeguard or countermeasure designed to protect the confidentiality, integrity, and availability of information systems and data. These controls can be physical, technical, or administrative in nature. Physical controls include measures like locks and surveillance cameras to secure physical assets. Technical controls, often software or hardware-based, include firewalls, encryption, and antivirus programs, aimed at protecting digital assets from cyber threats. Administrative controls consist of policies, procedures, and training that govern user behavior and operational procedures. Together, these controls form a comprehensive defense against a wide range of security threats, from unauthorized access and data breaches to internal policy violations. In a world where digital threats are constantly evolving, the implementation and continuous refinement of these security controls are crucial for maintaining the overall security posture of an organization.

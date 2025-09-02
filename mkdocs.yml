@@ -7,5 +7,5 @@ nav:
   - Updating: updating.md
   - Configuration: configuration.md
   - Single-Sign-On: 
-    - sso/azure.md
-    - sso/okta.md
+    - Microsoft Azure: sso/azure.md
+    - Okta: sso/okta.md

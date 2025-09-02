@@ -108,7 +108,7 @@ Once configured:
 - Generate a new secret in **Certificates & secrets** and update OpenGRC with the new value.
 
 ---
----
+
 
 
 

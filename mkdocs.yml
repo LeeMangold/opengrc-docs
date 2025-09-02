@@ -6,4 +6,6 @@ nav:
   - Foundations: foundations.md
   - Updating: updating.md
   - Configuration: configuration.md
-  - Single-Sign-On: sso.md
+  - Single-Sign-On: 
+    - azure.md
+    - okta.md

@@ -20,8 +20,6 @@ OpenGRC is a web-based tool that requires the user to run a webserver and a data
 
 While OpenGRC is intended to be an easy-to-use tool, it does require some technical knowledge to install and maintain. If you are not comfortable with the installation process, you may want to consider hiring a professional to help you get started.
 
-See the [Installation Guide](/installation) to get started hosting your own OpenGRC instance. 
-
 ## Documentation
 All OpenGRC Documentation is maintained at [https://docs.opengrc.com](https://docs.opengrc.com).
 

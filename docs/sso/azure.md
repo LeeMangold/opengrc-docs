@@ -85,24 +85,24 @@ Once configured:
 
 ### Common Issues and Fixes
 
-- **Invalid tenant or authority URL**
+**Invalid tenant or authority URL**
 - Verify that the **Tenant ID** in OpenGRC matches your Azure AD tenant.
 - If using multi-tenant, set the tenant to `common`.
 
-- **Redirect URI mismatch**
+**Redirect URI mismatch**
 - Ensure the redirect URI in Azure AD matches exactly what is in OpenGRC, including `https://` and trailing paths.
 - Example:  
   ```
   https://opengrc.test/auth/azure/callback
   ```
 
-- **Invalid client secret**
+**Invalid client secret**
 - Confirm you copied the **Value** of the client secret, not the ID.
 - Check that the secret has not expired.
 
-- **User not provisioned**
+**User not provisioned**
 - If **Auto Provision Users** is disabled, an administrator must manually create accounts in OpenGRC before login.
 - If enabled, ensure a default role is selected.
 
-- **Expired or revoked secret**
+**Expired or revoked secret**
 - Generate a new secret in **Certificates & secrets** and update OpenGRC with the new value.

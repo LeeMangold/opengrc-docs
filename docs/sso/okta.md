@@ -85,26 +85,26 @@ Once configured:
 
 ### Common Issues and Fixes
 
-- **Invalid Base URL**
+**Invalid Base URL**
 - Ensure you enter the full Okta domain (e.g., `https://your-org.okta.com`).
 - Do not include trailing slashes.
 
-- **Redirect URI mismatch**
+**Redirect URI mismatch**
 - The redirect URI configured in Okta must match exactly what is in OpenGRC.
 - Example:  
   ```
   https://opengrc.test/auth/okta/callback
   ```
 
-- **Invalid client credentials**
+**Invalid client credentials**
 - Double-check the **Client ID** and **Client Secret** values.
 - Regenerate a secret in Okta if necessary.
 
-- **User not provisioned**
+**User not provisioned**
 - If **Auto Provision Users** is disabled, users must be created manually in OpenGRC.
 - If enabled, ensure a default role is selected.
 
-- **Expired or revoked secret**
+**Expired or revoked secret**
 - Generate a new client secret in Okta and update OpenGRC accordingly.
 
 ---

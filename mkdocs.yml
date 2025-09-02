@@ -9,3 +9,5 @@ nav:
   - Single-Sign-On: 
     - Microsoft Azure: sso/azure.md
     - Okta: sso/okta.md
+    - Google Workspaces: sso/google.md
+    - Auth0: sso/auth0.md

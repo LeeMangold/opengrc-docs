@@ -11,3 +11,5 @@ nav:
     - Okta: sso/okta.md
     - Google Workspaces: sso/google.md
     - Auth0: sso/auth0.md
+  - API: 
+    - REST API: api.md

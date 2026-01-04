@@ -7,11 +7,19 @@ nav:
     - Getting Started: index.md    
     - Installation: installation.md
     - Updating: updating.md
-  - Configuration:
-    - AWS Storage: aws-storage.md
   - GRC Foundations:
-    - Foundations: foundations.md
-  
+    - Important Terms: foundations/key-terms.md
+    - Audits: foundations/audits.md
+    - Workflows: foundations/workflows.md
+  - Features:
+    - Trust Center: features/trustcenter.md
+    - Policies: features/policies.md
+    - Vendor Risk Management (TPRM): features/vendor-management.md
+    - Risk Management: features/risk-management.md
+    - Asset Management: features/assets.md
+    - Applications: features/applications.md    
+  - Configuration:
+    - AWS Storage: aws-storage.md  
   - Single-Sign-On: 
     - Microsoft Azure: sso/azure.md
     - Okta: sso/okta.md

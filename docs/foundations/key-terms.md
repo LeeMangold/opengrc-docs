@@ -1,30 +1,20 @@
-# GRC Foundations
+## Key Terms
 
-## Typical Workflows
-There are a lot of ways and means to implement a Governance, Risk, and Compliance program. The following workflows form the basis of most SMB GRC programs and is how OpenGRC is designed to work:
+These are the things you MUST know to effectively use OpenGRC. This should be considered required-reading for all OpenGRC users.
 
-### Compliance Workflow
-1. Create a new Standard that you want to adhere to.
-2. Add Controls (requirements) that, when followed, meet the requirements of the Standard.
-3. Create Implementations that satisfy the requirements of the Controls.
-4. Perform Audits to ensure that the Implementations put in place to meet the control requirements are being followed and are effective.
+```mermaid
+graph TD
+    A[Standard<br><i>eg. 800-171r3</i>] --> B[Control]
+    
+    B[Control<br><i>eg. 03.01.01-h Account Management</i>] --> C[Implementation<br><i>eg. GPO is configured to auto-logout after 15 minutes </i>]
+    
+    B --> D[Implementation<br><i>eg. SSH is configured to auto-logout after 15 minutes </i>]
 
-### Risk Workflow
-OpenGRC allows you to manage, rank, and track cybersecurity risks in your environment. This is a very simple Risk Management implementation and is likely sufficient for most small organizations. The following is a typical Risk Management workflow in OpenGRC:
-1. Create a new Risk.
-2. Rate the Risk based on its likelihood and impact, assuming you do NOTHING. This is your Inherent Risk.
-3. Create and relate Implementations to the Risk item that reduce the likelihood or impact of the Risk.
-4. Rate the Risk again, assuming you implement the Mitigations. This is your Residual Risk.
-
-The heatmaps will show you how successful you are at managing your risks. The goal is to reduce the Residual Risk to an acceptable level (determined by you and your organizations risk appetite). This can get you started with a basic risk management program, but please note that this description is not a full tutorial on Risk Management.
-
-
-## Foundational Data Objects
-
-## Programs
-Programs are the highest level of organization in OpenGRC. Programs are used to group together related Standards, Controls, Implementations, and Audits. In OpenGRC, a program is **optional** and simply a container for multiple standards. A good example for a usecase is, for example, CMMC. CMMC is a combination of the 800-171, 800-172, as well as various laws from the FAR and DFARS. Grouping them all together under one Program allows you to easily manage, audit, and report them all together.
-
-As a reminder, using the program feature is optional. You can still create and manage Standards, Controls, Implementations, and Audits without using a Program.
+    style A fill:#e1f5fe
+    style B fill:#f3e5f5
+    style C fill:#e8f5e8
+    style D fill:#e8f5e8
+```
 
 ## Standards
 Security standards are a set of guidelines and best practices designed to safeguard systems, networks, and data from various cyber threats. They establish a baseline for implementing and measuring effective security controls within organizations. These standards cover a broad range of areas including network security, data encryption, access control, and vulnerability management. By adhering to these standards, organizations can protect themselves against unauthorized access, data breaches, and other cyber threats, thereby ensuring the confidentiality, integrity, and availability of their information assets. Common examples of security standards include ISO/IEC 27001, which provides a framework for information security management systems, and the Payment Card Industry Data Security Standard (PCI DSS), which outlines security measures for organizations handling credit card transactions.
@@ -52,3 +42,39 @@ A security control is a safeguard or countermeasure designed to protect the conf
 
 ## Implementations
 Implementations are the actual means and methods we use to implement a control. Implementations relate to one or many controls and can satisfy the requirements of a control in various ways. For example, a control that requires a password to be at least 8 characters long can be implemented by configuring a system to enforce this requirement using a specific procedure or technology.
+
+## Programs
+Programs are the highest level of organization in OpenGRC. Programs are used to group together related Standards, Controls, Implementations, and Audits. In OpenGRC, a program is **optional** and simply a container for multiple standards OR controls. A good example for a usecase is, for example, CMMC. CMMC is a combination of the 800-171, 800-172, as well as various laws from the FAR and DFARS. Grouping them all together under one Program allows you to easily manage, audit, and report them all together.
+
+Another great example is when you want to group controls and standards for a functional area, like Physical Security. This allows you to Audit, Report, and assign ownership of specific controls and implementations to an individual or a department. When you create this program, it's ONLY a container - when controls are updated in the Program, they are live across the entire environment. In that way, you could audit physical security, and have the results be part of other larger audits.
+
+```mermaid
+graph TD
+    P[Program<br><i>Physical Security Program</i>] --> S[Standard<br><i>A Physical Security Standard</i>]
+    P --> C1[Control<br><i>Visitor Log Requirements</i>]
+    P --> C2[Control<br><i>Badge Access Policy</i>]
+    P --> C3[Control<br><i>CCTV Monitoring</i>]
+
+    S --> SC[Control<br><i>All the controls in this standard</i>]
+
+    SC --> I1[Implementation<br><i>Keycard access installed on all entry points</i>]
+    SC --> I2[Implementation<br><i>Security guard stationed at main entrance</i>]
+
+    C1 --> I3[Implementation<br><i>Digital visitor management system deployed</i>]
+    C2 --> I4[Implementation<br><i>RFID badges issued to all employees</i>]
+    C3 --> I5[Implementation<br><i>24/7 camera coverage with 30-day retention</i>]
+
+    style P fill:#fff3e0
+    style S fill:#e1f5fe
+    style C1 fill:#f3e5f5
+    style C2 fill:#f3e5f5
+    style C3 fill:#f3e5f5
+    style SC fill:#f3e5f5
+    style I1 fill:#e8f5e8
+    style I2 fill:#e8f5e8
+    style I3 fill:#e8f5e8
+    style I4 fill:#e8f5e8
+    style I5 fill:#e8f5e8
+```
+
+**As a reminder, using the program feature is optional.** You can still create and manage Standards, Controls, Implementations, and Audits without using a Program.

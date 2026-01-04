@@ -19,12 +19,23 @@ nav:
     - Asset Management: features/assets.md
     - Applications: features/applications.md    
   - Configuration:
-    - AWS Storage: aws-storage.md  
-  - Single-Sign-On: 
-    - Microsoft Azure: sso/azure.md
-    - Okta: sso/okta.md
-    - Google Workspaces: sso/google.md
-    - Auth0: sso/auth0.md
+    - Settings:
+      - General: settings/general.md
+      - AI: settings/ai.md
+      - Authentication: settings/authentication.md
+      - Mail: settings/mail.md
+      - Mail Templates: settings/mail-templates.md
+      - Reports: settings/reports.md
+      - Security: settings/security.md
+      - Storage: settings/storage.md
+      - AWS Storage: settings/aws-storage.md
+      - Trust Center: settings/trust-center.md
+      - Vendor Portal: settings/vendor-portal.md
+    - Single-Sign-On:
+      - Microsoft Azure: sso/azure.md
+      - Okta: sso/okta.md
+      - Google Workspaces: sso/google.md
+      - Auth0: sso/auth0.md
   - API:
     - REST API: api.md
   - Contributing: contributing.md

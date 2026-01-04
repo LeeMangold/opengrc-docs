@@ -1,7 +1,9 @@
 
 # Updating OpenGRC
 
-Updating OpenGRC can be done manaully or using the new update script (Linux only). The update process described below will update and configure all changes that have been pushed into production for OpenGRC. It will also update all dependencies, regardless of chanes to the codebase, allowing you to keep up with security patches.
+Updating OpenGRC can be done manaully or using the update script (Linux only). The update process described below will update and configure all changes that have been pushed into production for OpenGRC. It will also update all dependencies, regardless of chanes to the codebase, allowing you to keep up with security patches.
+
+**Using the update script is highly recommended!**
 
 ### Automated Process (Linux Only)
 From the ***installation path***, simply run 
@@ -32,4 +34,14 @@ php artisan migrate
 4. Build all the front-end dependencies
 ```shell
 npm run build
+```
+
+5. Set Permissions properly
+```shell
+./set_permissions
+```
+
+6. Clear caches
+```shell
+php artisan cache:clear
 ```

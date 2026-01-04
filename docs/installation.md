@@ -47,7 +47,7 @@ cd OpenGRC
 
 ## Step 2: Run the Installer
 
-A new installer is available to help you set up OpenGRC quickly. Run the following command to start the installation process:
+An installer is available to help you set up OpenGRC quickly. Run the following command to start the installation process:
 
 ```
 bash install.sh
@@ -67,46 +67,103 @@ php artisan opengrc:install --unattended
 
 ## Step 3: Set Permissions
 
-The file permissions set by the installer are more permissive than necessary, but are in place for ease of installation. You should review the ./set_permissions file, adjust as necessary for your chosen webserver environment, and run it to set the correct permissions for your environment.
+The file permissions set by the installer are more permissive than necessary, but are in place for ease of installation. You should review the ./set_permissions file, adjust as necessary for your chosen webserver environment, and run it to set the correct permissions for your environment. The set_permissions script is provided as a helpful utility, not as a security tool.
 
 ---
 
 ## Step 4: Log In!
 After configuring for your web server, you are now able to log in to your OpenGRC instance using the username and password set during the installation process.
 
+### Create a New User
 
-# Setting Permissions
-
-Ensure the necessary directories are writable by the web server:
-
-```
-artisan
-storage/
-bootstrap/cache
-storage/*
-database/opengrc.sqlite
-vendor/bin/*
+```bash
+php artisan opengrc:create-user
 ```
 
-You may also need to adjust group ownership to the web server user, e.g., `www-data` for Nginx or Apache.
+This interactive command will prompt you for user details including name, email, and password.
+
+### Reset a User's Password
+
+```bash
+php artisan opengrc:reset-password
+```
+
+This command allows you to reset the password for an existing user.
 
 ---
 
-# Docker Instructions
+# Docker Installation
 
-NOTE: This is out of date and needs to be updated based on new install method.
+OpenGRC includes a production-ready Dockerfile based on Ubuntu 24.04 with Apache, PHP 8.3, and Node.js 20.
 
-A Dockerfile is included with OpenGRC that uses SQLite persistence and HTTP on port 80 running on Apache. You can set the following environment variables using the -e <name>=<value> flag in docker run:
+## Building the Docker Image
 
-```yml
-APP_ENV - default: local
-APP_DEBUG - default: false, set to true to see detailed error screens.
-DB_CONNECTION - default: "sqlite", can be set to "mysql" for a MySQL database.
-DB_HOST - default: "localhost"
-DB_PORT - default: "", can be set to "3306" for a MySQL database.
-DB_DATABASE - default: "/var/www/html/storage/opengrc.sqlite", the database name ("opengrc" for MySQL)
-DB_USERNAME - default: "", the database user name.
-DB_PASSWORD - default: "", the database password.
+```bash
+git clone https://github.com/LeeMangold/OpenGRC.git
+cd OpenGRC
+docker build -t opengrc .
 ```
 
-To run the build, use composer run-script docker-build.
+## Running the Container
+
+```bash
+docker run -d -p 80:80 --name opengrc opengrc
+```
+
+The application will be available at `http://localhost`.
+
+## Environment Variables
+
+Configure the container using environment variables with the `-e` flag:
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `APP_ENV` | `local` | Application environment (`local`, `production`) |
+| `APP_DEBUG` | `false` | Enable detailed error screens |
+| `DB_CONNECTION` | `sqlite` | Database driver (`sqlite` or `mysql`) |
+| `DB_HOST` | `localhost` | Database host (for MySQL) |
+| `DB_PORT` | - | Database port (`3306` for MySQL) |
+| `DB_DATABASE` | `/var/www/html/database/opengrc.sqlite` | Database name or path |
+| `DB_USERNAME` | - | Database username (for MySQL) |
+| `DB_PASSWORD` | - | Database password (for MySQL) |
+
+### Example with MySQL
+
+```bash
+docker run -d -p 80:80 \
+  -e DB_CONNECTION=mysql \
+  -e DB_HOST=your-mysql-host \
+  -e DB_PORT=3306 \
+  -e DB_DATABASE=opengrc \
+  -e DB_USERNAME=opengrc_user \
+  -e DB_PASSWORD=your_password \
+  --name opengrc opengrc
+```
+
+### Persisting SQLite Data
+
+To persist the SQLite database across container restarts:
+
+```bash
+docker run -d -p 80:80 \
+  -v opengrc-data:/var/www/html/database \
+  --name opengrc opengrc
+```
+
+## Container Features
+
+The Docker image includes:
+
+- **PHP 8.3** with FPM (optimized for 1GB memory)
+- **Apache 2** with mod_rewrite, mod_headers, and mod_security2
+- **ModSecurity** with OWASP Core Rule Set
+- **Health checks** via HTTP on port 80
+- **Cron** configured for Laravel scheduled tasks
+
+## Health Check
+
+The container includes a health check that verifies the application is responding:
+
+```bash
+docker inspect --format='{{.State.Health.Status}}' opengrc
+```

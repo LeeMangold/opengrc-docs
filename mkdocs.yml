@@ -3,15 +3,20 @@ theme: readthedocs
 repo_url: https://github.com/LeeMangold/opengrc-docs
 edit_uri: edit/main/docs/
 nav:
-  - Home: index.md
-  - Installation: installation.md
-  - Foundations: foundations.md
-  - Updating: updating.md
-  - Configuration: configuration.md
+  - Getting Started:
+    - Getting Started: index.md    
+    - Installation: installation.md
+    - Updating: updating.md
+  - Configuration:
+    - AWS Storage: aws-storage.md
+  - GRC Foundations:
+    - Foundations: foundations.md
+  
   - Single-Sign-On: 
     - Microsoft Azure: sso/azure.md
     - Okta: sso/okta.md
     - Google Workspaces: sso/google.md
     - Auth0: sso/auth0.md
-  - API: 
+  - API:
     - REST API: api.md
+  - Contributing: contributing.md

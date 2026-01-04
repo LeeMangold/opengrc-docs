@@ -4,39 +4,46 @@
 
 # Welcome to OpenGRC
 
-OpenGRC is a cyber Governance, Risk, and Compliance web application intended for use by small businesses and teams. This is not intended to replace large-scale GRC Platforms, but it just might for your usecase. OpenGRC provides a resource for those who need to manage a security program but can't manage the price tag and complexity of alternatives.
+OpenGRC is a cyber Governance, Risk, and Compliance web application intended for use by small-midsized businesses and teams. OpenGRC provides a resource for those who need to manage a security program but choose not to manage the price tag and complexity of alternatives.
 
 * Simple interface designed to get up and running with very little training
 * Quick imports of common security frameworks
 * Ability to connect Standards, Controls, and your actual Implementations
 * Ability to perform audits for internal and external assessments
 * Report generation capability to create deliverables for auditors
-* Intuitive dashboards to display your progress
+* Vendor Management and Surveying
+* Customer Trust Poral
 
-Above all, OpenGRC is written to solve cyber compliance headaches that tend to be caused by complex enterprise solutions. It doesn't have to be that hard!
+Above all, OpenGRC is written to solve cyber compliance headaches that tend to be caused by complex enterprise solutions. It doesn't have to be that hard! While the featurset of OpenGRC is robust enough for most companies, it was designed and written by security GRC and operations experts to solve problems, not make them.
 
 ## How to get OpenGRC
-OpenGRC is a web-based tool that requires the user to run a webserver and a database server. There are two ways to deploy OpenGRC: Install the software like a standard web application on your web server or install it in a containerized environment like Docker or Podman. 
+### Community OpenGRC
 
-While OpenGRC is intended to be an easy-to-use tool, it does require some technical knowledge to install and maintain. If you are not comfortable with the installation process, you may want to consider hiring a professional to help you get started.
+OpenGRC is a web-based tool that requires the user to run a webserver and a database server. 
+
+While OpenGRC is intended to be an easy-to-use tool, it does require some technical knowledge to install and maintain. If you are not comfortable with the installation process, you may want to consider a professional support option to help you get started.
+
+### Commercial Offering
+OpenGRC, LLC offers business-grade hosting for those who don't have the expertise available to manage and maintain your GRC solution. Find out more at [OpenGRC.com](https://docs.opengrc.com)
 
 ## Documentation
 All OpenGRC Documentation is maintained at [https://docs.opengrc.com](https://docs.opengrc.com).
 
 ## Contributing to OpenGRC
 
-OpenGRC is an open-source project and we welcome contributions. Contribution guidelines will be published soon!
+OpenGRC is an open-source project and we welcome contributions. More details at [Contributing](https://docs.opengrc.com/contributing)
 
 ## License
 OpenGRC is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
-Exceptions:
+
+**Exceptions:**
 * Code Commits prior to April 14, 2025 are MIT Licensed.
 * Commercial use is permitted as long as resale of the OpenGRC code is not involved in any way. In other words, you may use this for your own company to help you in your own GRC endeavors.
 * Hosting of this software for customers - regardless of compensation - is not permitted.
 
 ## Security
 
-If you believe you have found a security vulnerability in OpenGRC, please report it to lee@opengrc.com.
+If you believe you have found a security vulnerability in OpenGRC, please let us know using [responsible channels](https://github.com/LeeMangold/OpenGRC/security/policy). 
 
 ## Acknowledgements
 
@@ -52,5 +59,5 @@ The OpenGRC code of conduct is derived from the Laravel and Ruby codes of conduc
 - Participants must ensure that their language and actions are free of personal attacks and disparaging personal remarks.
 - When interpreting the words and actions of others, participants should always assume good intentions.
 - Behavior that can be reasonably considered harassment will not be tolerated.
-
+- The OpenGRC community is not the place for political, racial, sexual, or gender discussions. This broadly includes an forms of harassment and discrimination. 
 

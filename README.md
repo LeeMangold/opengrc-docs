@@ -9,8 +9,12 @@ This repository contains the documentation for [OpenGRC](https://github.com/LeeM
 This documentation site is built with [MkDocs](https://www.mkdocs.org/).
 
 ```bash
-# Install MkDocs (if not already installed)
-pip install mkdocs
+# Install MkDocs Material theme (includes MkDocs)
+pip install mkdocs-material
+
+# On some systems (e.g., Debian/Ubuntu), you may need:
+# pip install mkdocs-material --break-system-packages
+# Note: This bypasses system package protection. Consider using a virtual environment instead.
 
 # Serve locally with live reload
 mkdocs serve

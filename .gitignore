@@ -1,4 +1,5 @@
-sites
+site
 OpenGRC
 .claude
 .venv
+.cache

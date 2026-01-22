@@ -1,6 +1,25 @@
 site_name: OpenGRC Documentation
-theme: readthedocs
-repo_url: https://github.com/LeeMangold/opengrc-docs
+site_url: https://docs.opengrc.com
+site_description: Comprehensive documentation for OpenGRC, the open-source Governance, Risk, and Compliance
+site_author: OpenGRC, LLC
+theme:
+  name: material
+  logo: img/logo-256.png
+  favicon: img/favicon-32x32.png
+  palette:
+    primary: custom
+extra_css:
+  - stylesheets/extra.css
+plugins:
+  - privacy
+  - search
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+repo_url: https://github.com/LeeMangold/OpenGRC
 edit_uri: edit/main/docs/
 nav:
   - Getting Started:

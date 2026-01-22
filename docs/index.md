@@ -37,6 +37,7 @@ OpenGRC is an open-source project and we welcome contributions. More details at 
 OpenGRC is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
 
 **Exceptions:**
+
 * Code Commits prior to April 14, 2025 are MIT Licensed.
 * Commercial use is permitted as long as resale of the OpenGRC code is not involved in any way. In other words, you may use this for your own company to help you in your own GRC endeavors.
 * Hosting of this software for customers - regardless of compensation - is not permitted.
